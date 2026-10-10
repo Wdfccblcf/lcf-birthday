@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {Figurine} from './figurine.js?v=195483fbf2b9';
+import {Figurine} from './figurine.js?v=c35613c8ca7f';
 import {GiftTurn} from './gift-turn.js?v=f45908682ed1';
 
 export class WhiteGift extends Figurine {

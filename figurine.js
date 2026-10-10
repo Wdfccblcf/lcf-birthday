@@ -55,8 +55,8 @@ export class Figurine {
   }
   async load(){
     if(this.ready)return;if(this.loading)return this.loading;
-    this.abort?.abort();this.abort=new AbortController();const signal=this.abort.signal;
-    const timeout=setTimeout(()=>this.abort.abort(new DOMException('Asset loading timed out','TimeoutError')),45000);
+    this.abort?.abort();const controller=this.abort=new AbortController();const signal=controller.signal;
+    const timeout=setTimeout(()=>controller.abort(new DOMException('Asset loading timed out','TimeoutError')),180000);
     this.loading=(async()=>{
       const response=await fetch('./assets/model-manifest.json',{signal,cache:'no-cache'});if(!response.ok)throw Error('资源清单暂时无法读取');const manifest=await response.json();this.manifest=manifest;
       this.onProgress('正在准备这份三维礼物');
@@ -90,7 +90,7 @@ export class Figurine {
       this.addPodium(this.box.min.y);
       this.ready=true;this.resize();this.reset();this.onProgress('礼物已准备好');
       this.renderer.compile(this.scene,this.camera);
-    })().catch(e=>{this.clearModel();throw e;}).finally(()=>{clearTimeout(timeout);this.loading=null;});return this.loading;
+    })().catch(e=>{this.clearModel();throw e;}).finally(()=>{clearTimeout(timeout);if(this.abort===controller)this.loading=null;});return this.loading;
   }
   attachPaintShader(material){
     material.onBeforeCompile=shader=>{
