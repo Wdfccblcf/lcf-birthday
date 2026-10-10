@@ -1,6 +1,5 @@
 import {Ritual,Microphone,TIMES} from './ritual-core.js?v=4cd79d2a2114';
-import {WhiteGift} from './white-gift.js?v=9e126b497fc2';
-import {saveGiftCoupon} from './gift-coupon.js?v=2aaebbaa447f';
+import {WhiteGift} from './white-gift.js?v=e61b33cb7d91';
 import {TicketInput} from './ticket-interaction.js?v=35c7d7a15a5c';
 import {MemoryCorridor} from './corridor.js?v=b7b6e7278a27';
 import {loadMemoryCatalog} from './memory-data.js?v=34346995ff68';
@@ -131,9 +130,9 @@ function showGiftCoupon(){
  if(ritual.state!=='exhibit'||loadError||!figurine?.reopen())return;
  const claimed=figurine.gift.claimed,dialog=$('#gift-dialog');
  dialog.dataset.claimed=String(claimed);$('#gift-claim-title').textContent=claimed?'已领取':'是否领取';
- $('#claim-gift').hidden=claimed;$('#defer-gift').hidden=claimed;$('#save-gift-coupon').hidden=!claimed;$('#close-gift-coupon').hidden=!claimed;
+ $('#claim-gift').hidden=claimed;$('#defer-gift').hidden=claimed;$('#close-gift-coupon').hidden=!claimed;
  if(!dialog.open)dialog.showModal();
- (claimed?$('#save-gift-coupon'):$('#claim-gift')).focus({preventScroll:true});
+ (claimed?$('#close-gift-coupon'):$('#claim-gift')).focus({preventScroll:true});
 }
 function prepareOpeningPaper(){
  const wrap=$('.envelope-wrap'),paper=$('.drawn-card'),letter=$('#letter'),mark=$('.letter-flower');
@@ -209,7 +208,6 @@ $('#claim-gift').addEventListener('click',()=>{if(figurine?.claim())showGiftCoup
 $('#defer-gift').addEventListener('click',()=>{figurine?.defer();$('#gift-dialog').close();});
 $('#gift-dialog').addEventListener('cancel',()=>figurine?.defer());
 $('#gift-dialog').addEventListener('close',()=>{if(ritual.state==='exhibit')($('#view-gift-coupon').hidden?$('#leave-exhibit'):$('#view-gift-coupon')).focus({preventScroll:true});});
-$('#save-gift-coupon').addEventListener('click',saveGiftCoupon);
 $('#close-gift-coupon').addEventListener('click',()=>{ritual.leaveExhibit();window.scrollTo({top:0,behavior:'instant'});});
 function visibility(){if(document.hidden&&ticket.drag)ticket.cancel();ritual.pause(document.hidden);music.setHidden(document.hidden);document.body.classList.toggle('is-paused',document.hidden);last=performance.now();}
 document.addEventListener('visibilitychange',visibility);
