@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#09090b"><meta name="description" content="给 LCF 的生日邀请拆开邀请函走过回忆许一个愿"><title>LCF  生日之约</title>
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css?v=6e520cc07cfd"><link rel="stylesheet" href="./mystery.css?v=0367ed9df8af"><link rel="stylesheet" href="./refinements.css?v=20bdc27c8ad7"><link rel="stylesheet" href="./photo-cake.css?v=9c8804e0c8d9"><link rel="stylesheet" href="./ticket.css?v=2efe97ca13b4"><link rel="stylesheet" href="./birthday-entry.css?v=f5428a272deb"><link rel="stylesheet" href="./corridor.css?v=f079b1be576f"><link rel="stylesheet" href="./party.css?v=657d8684e7f8">
+<link rel="stylesheet" href="./music.css?v=4f10af745cfd"><link rel="stylesheet" href="./white-gift.css?v=9930ce42cbfd"><script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js"}}</script><script type="module" src="./app.js?v=2352bc82883f"></script></head>
+<body data-stage="envelope">
+<div class="ambience" aria-hidden="true"><div class="aura"></div><div class="orbit"></div><div class="orbit orbit-two"></div><div id="stars"></div></div>
+<header class="quiet-header"><a class="monogram" id="invitation-home" href="./" aria-label="回到生日邀请函">LCF <i>✦</i></a></header>
+<main>
+<section class="scene letter-scene" id="letter-scene" aria-label="一封生日来信">
+<div class="entry-copy">
+ <p class="eyebrow entry-caption"><span></span> 给 LCF 的生日邀请</p>
+ <h1 class="entry-title">为你<br>留了一场生日之约</h1>
+ <p class="entry-description">带着回忆赴约<br>一起迎接新的一岁</p>
+ 
+</div>
+<div class="letter-object">
+ <div class="invitation-shadow" aria-hidden="true"></div>
+ <div class="envelope-wrap">
+  
+  <button class="envelope" id="open-letter" aria-label="打开给 LCF 的生日邀请函">
+   <span class="envelope-back"></span><span class="paper-peek"></span><span class="drawn-card" aria-hidden="true"><span class="drawn-ticket-title">生日邀请函</span><span class="drawn-ticket-headline">LCF 的生日之约</span><span class="drawn-ticket-mark">L</span><span class="drawn-ticket-perforation"></span><span class="drawn-ticket-stub">撕下赴约</span></span><span class="envelope-front"></span><span class="envelope-flap"></span>
+   <span class="envelope-address"><strong>LCF 亲启</strong></span>
+   <span class="wax-seal" aria-hidden="true"><span class="seal-monogram">L</span><span class="seal-orbit"></span></span>
+  </button>
+ </div>
+ <p class="open-hint"><span aria-hidden="true">↗</span> 打开这封信</p>
+</div><div class="card-stage">  <article class="letter ticket" id="letter" hidden aria-labelledby="letter-title">
+   <div class="ticket-content">
+    <p class="ticket-overline">生日邀请函</p>
+    <span class="letter-flower" aria-hidden="true">L</span>
+    <h2 id="letter-title">LCF 的生日之约</h2>
+    <span class="ticket-fine-rule" aria-hidden="true"></span>
+   </div>
+   <button class="ticket-stub" id="accept-letter" aria-label="沿虚线撕下右侧票根开启生日邀请">
+    <span class="ticket-tear-line" aria-hidden="true"></span>
+    <span class="ticket-stub-label">撕下赴约</span>
+    <svg class="ticket-stub-arrow" viewBox="0 0 32 12" aria-hidden="true"><path d="M1 6h28m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   </button>
+   <span class="ticket-tip" aria-hidden="true"></span><span class="ticket-light" aria-hidden="true"></span><span class="ticket-flecks" aria-hidden="true"></span>
+  </article></div></section>
+<section class="scene arrival-scene" id="arrival-scene" hidden aria-labelledby="arrival-title">
+ <div class="birthday-gate" aria-hidden="true"><div class="gate-halo"></div><div class="gate-curtain gate-curtain-left"></div><div class="gate-curtain gate-curtain-right"></div><div id="birthday-motes"></div></div>
+ <div class="arrival-copy"><span class="arrival-ornament" aria-hidden="true">✦</span><h2 id="arrival-title"><span>欢迎赴约</span><strong>LCF</strong></h2><p>先走过那些小小的回忆<br>再为新的一岁许个愿</p><button id="continue-birthday" class="birthday-continue">走进回忆走廊 <span aria-hidden="true">↗</span></button></div>
+</section>
+<section class="corridor-scene" id="corridor-scene" hidden aria-labelledby="corridor-title">
+ <div id="corridor-host" class="corridor-host"></div>
+ <div class="corridor-shade" aria-hidden="true"></div>
+ <nav class="corridor-stops" aria-label="回忆走廊的停留点"></nav>
+ <div class="corridor-copy" aria-live="polite"><p id="corridor-overline" class="corridor-overline">生日之约</p><h2 id="corridor-title">回忆走廊</h2><p id="corridor-description">有些小事想再陪你走一遍</p><button id="corridor-action" class="birthday-continue">走近第一段回忆 <span aria-hidden="true">↗</span></button></div>
+ <div class="corridor-navigation"><button id="corridor-prev" aria-label="上一段回忆">←</button><span id="corridor-position">入口</span><button id="corridor-next" aria-label="下一段回忆">→</button></div>
+ <div id="corridor-error" class="corridor-error" role="alert" hidden><p id="corridor-error-text"></p><button id="retry-corridor">重新打开走廊</button></div>
+</section>
+<dialog id="flower-memory" class="flower-memory" aria-labelledby="flower-title">
+ <button id="close-memory" class="memory-close" aria-label="收起这段回忆返回走廊">×</button>
+ <article class="flower-card"><div class="flower-question"><p class="memory-overline">那次猜花名的活动</p><h2 id="flower-title">这朵花叫什么</h2><img src="./assets/memory-flower.jpg" width="3264" height="2176" alt="花朵照片猜猜它的名字" decoding="async"><div id="flower-photo-status" class="flower-photo-status" role="status" hidden><p>照片暂时没有加载完成</p><button id="retry-flower-photo">重新加载照片</button></div><form id="flower-guess"><label class="sr-only" for="flower-answer-input">你猜的花名</label><input id="flower-answer-input" name="flower" placeholder="写下你猜的花名" maxlength="40" autocomplete="off"><button type="submit">翻开答案 <span aria-hidden="true">↓</span></button></form></div>
+ <div class="flower-answer" id="flower-answer" aria-live="polite"><div class="flower-answer-fold" aria-hidden="true"><span>答案在下面</span><span>↓</span></div><div class="flower-answer-inside" hidden><p id="flower-feedback"></p><h3>向日葵</h3><p class="memory-note">那次学校社团活动<br>我帮你准备了猜花名的题卡<br>问题在上面答案在下面<br>今天再陪你猜一次</p><button id="memory-continue">继续逛一逛 <span aria-hidden="true">→</span></button></div></div></article>
+</dialog>
+<section class="scene candle-scene" id="candle-scene" aria-labelledby="candle-title" hidden>
+<h2 id="candle-title">许一个愿吧</h2><p class="scene-subtitle" id="wish-hint">闭上眼睛在 10 秒里许下愿望</p>
+<div class="cake-stage" id="cake-stage"><div class="candle-glow" aria-hidden="true"></div><div class="wish-dots" id="wish-dots" aria-hidden="true"></div>
+<div id="cake" class="photo-cake" role="img" aria-label="一支点亮的蜡烛和蛋糕">
+ <img src="./assets/mango-cake-photo-edited.png" width="1254" height="1254" alt="" decoding="async">
+ <svg class="photo-fire" viewBox="0 0 22 38" aria-hidden="true"><defs><linearGradient id="photo-flame-color" x2="0" y2="1"><stop stop-color="#ffad43"/><stop offset=".65" stop-color="#ffe49a"/><stop offset="1" stop-color="#fff6d5"/></lineargradient></defs><g class="flame"><path d="M11 37C-3 30 3 13 11 0c7 14 16 32 0 37Z" fill="url(#photo-flame-color)"/><path d="M11 36C6 32 7 21 11 16c4 8 7 17 0 20Z" fill="#fffbe9"/></g></svg>
+ <svg class="photo-smoke" viewBox="0 0 50 85" aria-hidden="true"><path d="M25 80c-14-16 13-23 0-39S36 18 27 4" fill="none" stroke="#cfc7b4" stroke-width="1.5" stroke-linecap="round"/><path d="M25 80c10-13-8-21 1-32" fill="none" stroke="#cfc7b4" stroke-width="1" opacity=".4"/></svg>
+</div>
+</div>
+<button class="primary" id="start-wish">开始许愿 <span aria-hidden="true">✦</span></button><p class="mic-note" id="mic-note">允许麦克风后可以轻轻吹灭蜡烛<br>不方便也没关系烛光会自动为你熄灭</p><p class="wish-status" id="wish-status" role="status" aria-live="polite"></p></section>
+<section class="scene blessing-scene" id="blessing-scene" hidden aria-labelledby="blessing-title"><span class="blessing-star" aria-hidden="true">✦</span><h2 id="blessing-title">愿你新的一岁</h2><p class="blessing-copy">所愿皆有回应所行皆有风景<br>也一直拥有选择自己生活的勇气</p><span class="fine-rule"></span></section>
+<section class="model-scene" id="model-scene" hidden aria-label="铃铛白模三维展示">
+ <div class="white-gallery">
+  <div class="gallery-stage"><div id="model-host" class="model-host"></div>
+   <div class="loading-panel" id="loading-panel" role="status" hidden><span class="gift-loading-dot" aria-hidden="true"></span><p id="loading-text">正在准备白模</p></div>
+  </div>
+  <div class="gift-actions"><button id="retry-model" type="button" hidden>重新加载</button><button id="view-gift-coupon" type="button" hidden>领取券</button><button id="leave-exhibit" type="button">返回走廊</button></div>
+ </div>
+</section>
+<dialog id="gift-dialog" class="gift-dialog" aria-labelledby="gift-claim-title" data-claimed="false">
+ <h2 id="gift-claim-title">是否领取</h2>
+ <div class="gift-coupon" id="gift-coupon">
+  <div class="coupon-main"><span class="coupon-monogram">LCF</span><p class="coupon-title">领取券</p><p class="coupon-gift">铃铛白模手办</p><p class="coupon-redemption">回家即可兑换</p></div>
+  <div class="coupon-stub" aria-hidden="true"><strong>18</strong><span>生日礼物</span></div><span class="coupon-stamp">已领取</span>
+ </div>
+ <div class="claim-actions"><button id="claim-gift" type="button">领取</button><button id="defer-gift" type="button">暂不领取</button><button id="save-gift-coupon" type="button" hidden>保存领取券</button><button id="close-gift-coupon" type="button" hidden>返回走廊</button></div>
+</dialog>
+<section class="scene party-scene" id="party-scene" hidden aria-labelledby="party-title">
+ <div class="party-atmosphere" aria-hidden="true">
+  <svg class="party-lights" viewBox="0 0 1200 190" preserveAspectRatio="none"><path d="M-30 18Q250 165 570 56T1230 55" fill="none" stroke="#c9a164" stroke-width="1"/><g fill="#ffdf9d"><circle cx="30" cy="47" r="3"/><circle cx="132" cy="81" r="3"/><circle cx="242" cy="101" r="3"/><circle cx="355" cy="99" r="3"/><circle cx="462" cy="82" r="3"/><circle cx="570" cy="56" r="3"/><circle cx="677" cy="25" r="3"/><circle cx="787" cy="9" r="3"/><circle cx="898" cy="9" r="3"/><circle cx="1006" cy="22" r="3"/><circle cx="1114" cy="42" r="3"/></g></svg>
+  <div class="party-balloons balloons-left"><span class="balloon-flight"><i class="balloon balloon-gold"></i></span><span class="balloon-flight"><i class="balloon balloon-ivory"></i></span><span class="balloon-flight"><i class="balloon balloon-bronze"></i></span></div>
+  <div class="party-balloons balloons-right"><span class="balloon-flight"><i class="balloon balloon-ivory"></i></span><span class="balloon-flight"><i class="balloon balloon-gold"></i></span></div>
+  <div id="party-motes"></div>
+ </div>
+ <div class="party-greeting">
+  <p class="party-english" lang="en">Happy Birthday</p>
+  <h2 id="party-title"><span>生日快乐</span><em>LCF</em></h2>
+  <p class="party-blessing">今天的回忆留在这里<br>愿新的一岁有喜欢的事可做<br>有小小的惊喜也有长长的开心</p>
+ </div>
+ <div class="party-table" aria-hidden="true"><span class="party-tabletop"></span><img class="party-gifts" src="./assets/birthday-gifts-photo-v1.png" width="2048" height="768" alt="" decoding="async"><img class="party-cake" src="./assets/mango-cake-photo-edited.png" width="1254" height="1254" alt="" decoding="async"></div>
+ <div class="party-closing"><p class="party-wish" lang="en">May your wishes come true</p><div class="party-actions"><button id="revisit-corridor">再逛逛回忆走廊</button></div></div>
+</section>
+<details class="making-records" id="making-records" hidden><summary><span>这份礼物的制作记录</span><span aria-hidden="true">＋</span></summary><div id="preserved-records">
+      <section class="making" aria-labelledby="making-title">
+        <div class="making-intro">
+          <p class="eyebrow">THE MAKING / 数字里的心意</p>
+          <h2 id="making-title">把心意做成了铃铛</h2>
+          <p>从一张原画开始慢慢补齐配色表情道具和指尖的细节这里留下一些制作记录也留下这份生日礼物走过的路</p>
+        </div>
+        <div class="effort-grid" aria-label="制作投入统计">
+          <article class="effort-card token-card"><span class="stat-code" aria-hidden="true">01 / TOKEN</span><span>Codex 累计处理量</span><strong>4.65<span>亿+</span></strong><p>输入与输出 Token包含缓存输入</p></article>
+          <article class="effort-card source-card"><span class="stat-code" aria-hidden="true">02 / SOURCE</span><span>现存自编源码</span><strong>184<span>份+</span></strong><p>按相同内容校验去重</p></article>
+          <article class="effort-card lines-card"><span class="stat-code" aria-hidden="true">03 / LINES</span><span>非空源码行</span><strong>13143<span>行+</span></strong><p>建模检查交付与网站含注释</p></article>
+          <article class="effort-card time-card"><span class="stat-code" aria-hidden="true">04 / TIME</span><span>累计运行时间</span><strong>53<span>小时+</span></strong><p>已结束执行回合累计含模型与工具</p></article>
+        </div>
+        <figure class="token-composition" aria-label="已核验 Token 处理量构成">
+          <figcaption><span>Token 处理构成</span><span class="verified-label">保留记录  可核验</span></figcaption>
+          <div class="token-bar" role="img" aria-label="缓存输入 436847872非缓存输入 26084434输出 2835041 Token"><span class="cached-segment" style="width:93.79%"></span><span class="input-segment" style="width:5.60%"></span><span class="output-segment" style="width:0.61%"></span></div>
+          <div class="token-legend"><span><i class="cached-key" aria-hidden="true"></i>缓存输入 <b>4.368 亿</b></span><span><i class="input-key" aria-hidden="true"></i>非缓存输入 <b>2608 万</b></span><span><i class="output-key" aria-hidden="true"></i>输出 <b>283.5 万</b></span></div>
+        </figure>
+        <p class="effort-caption">Token 与运行时间截至 2026 年 10 月 5 日 1326北京时间代码数量为当日保留源码快照数字是已记录的下限Token 用量不等于 Codex 账户额度百分比或费用</p>
+        <details class="methodology">
+          <summary><span>这些投入具体怎么统计</span><span class="summary-arrow" aria-hidden="true">＋</span></summary>
+          <div class="methodology-copy">
+            <p><b>Codex 用量</b>核对手办项目迁移前后的关联记录共 71 份相关已保存日志3837 条去重请求累计处理 465767347 Token约 4.65 亿主卡片按此口径显示其中缓存输入 436847872非缓存输入 26084434输出 2835041非缓存输入与输出合计 28919475总量已包含 73 条项目自动审核请求的 2946104 Token缓存输入已包含在输入总量内没有重复相加重复携带上下文是实际处理量不代表同样数量的新文字或代码</p>
+            <p><b>账户额度</b>现有记录无法按这一个项目准确回溯账户额度百分比重置次数或金额因此不作费用或额度比例换算未保存的请求与未覆盖的历史分支没有补估</p>
+            <p><b>运行时间</b>已核验 269 个结束的执行回合累计 53 小时 5 分 11 秒卡片保守显示 53 小时+包括模型处理工具执行和回合内等待并行回合分别累计失败或中断前的实际执行也计入回合之间等待用户回复的时间不计入另扣除了有明确记录的同步回答等待缺少结束记录的回合暂不计云环境准备时间另外记录不计入主卡这是可核验的累计执行时间不是人工工时也不是纯模型推理时间</p>
+            <p><b>代码量</b>对现存建模修复诊断验证渲染交付和网站源码按 SHA-256 去重计 184 份13143 行非空源码含注释第三方依赖模型图片日志Base64 模型数据与打包生成的查看器不计入已清理的旧脚本与只出现在聊天里的代码也没有补估</p>
+            <p><b>版本量</b>下面列出 12 个有交付依据的主要节点包含造型修正配色制造说明与白模精修相同文件复制和普通重复打包没有算成新版本早期制作与后期交付各自编号文件名中的 v8 并不是全部尝试的总次数</p>
+            <p><a class="stats-data-link" href="./assets/making-stats.json" target="_blank" rel="noopener">查看这次统计的汇总数据 ↗</a>  仅公开汇总数字私人聊天与工作日志保留在本机</p>
+          </div>
+        </details>
+        <details class="journey-details">
+        <summary class="journey-heading"><span class="journey-title">一路走来的几个节点</span><span class="journey-meta">12 次+迭代  <span class="journey-action">展开查看</span> <span class="summary-arrow" aria-hidden="true">＋</span></span></summary>
+        <p class="journey-period">2026.09  2026.10  每一步都是这份礼物的一部分</p>
+        <ol class="journey">
+          <li><time datetime="2026-09-22">09.22</time><div><h4>初版三维手办与打印包</h4><p>150 mm 角色彩色参考模型工程与打印文件</p></div></li>
+          <li><time datetime="2026-09-22">09.22</time><div><h4>双脚站姿与比例修正版</h4><p>分开双脚调整腿部脸型与笑口保留角色配色</p></div></li>
+          <li><time datetime="2026-09-24">09.24</time><div><h4>早期完整重建与制造数据图</h4><p>形成早期 v4 模型三维参考与制造数据图</p></div></li>
+          <li><time datetime="2026-09-25">09.25</time><div><h4>修正版 04</h4><p>校准嘴部降低浓艳配色集中展示底座刻字</p></div></li>
+          <li><time datetime="2026-10-01">10.01</time><div><h4>商家交付 v1</h4><p>冻结几何整理打印涂装和装配交接</p></div></li>
+          <li><time datetime="2026-10-01">10.01</time><div><h4>糖果音符交付 v2</h4><p>三枚音符形成草莓柠檬薄荷色搭配</p></div></li>
+          <li><time datetime="2026-10-01">10.01</time><div><h4>一致性复核交付 v3</h4><p>重新生成配色一致的细节图核对交付资料</p></div></li>
+          <li><time datetime="2026-10-01">10.01</time><div><h4>商家简版资料 v4</h4><p>中文文件名与两页制造说明沿用打印几何</p></div></li>
+          <li><time datetime="2026-10-01">10.01</time><div><h4>一图制造总览 v5</h4><p>把六方向尺寸和制造资料集中到一张图</p></div></li>
+          <li><time datetime="2026-10-02">10.02</time><div><h4>标准音符交付 v7</h4><p>采用实心椭圆符头细杆和弯曲符尾保留装配定位</p></div></li>
+          <li><time datetime="2026-10-03">10.03</time><div><h4>嘴部与握柄局部白模 v8</h4><p>修复手与柄的接触区嘴周轮廓形成打印白模</p></div></li>
+          <li><time datetime="2026-10-04">10.04</time><div><h4>手指清晰度修正版与整合白模</h4><p>加强指腹指缝与拇指关系整合为当时的手指清晰版模型</p></div></li>
+        </ol>
+        </details>
+        <blockquote>从原画到这份礼物想留下的是铃铛轻快的样子也是一份认真准备的祝福生日快乐愿你的新一岁有小小惊喜也有长长的开心</blockquote>
+      </section>
+</div></details>
+</main><button id="music-toggle" class="music-toggle" type="button" hidden aria-label="播放音乐" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l4-4v12l-4-4H3Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path class="music-wave" d="M13 7q3 3 0 6m3-9q5 6 0 12" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg><span class="music-label">音乐</span></button><div class="toast" id="toast" hidden role="status"></div>
+<div id="portal-flash" hidden aria-hidden="true"></div>
+<noscript><p class="noscript">这份互动礼物需要 JavaScript你也可以<a href="./assets/white-six-views.png">查看真实白模六视图</a></p></noscript></body></html>

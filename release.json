@@ -1,0 +1,23 @@
+{
+  "id": "lcf-public-20261010-r5",
+  "preparedAtUTC": "2026-10-10T11:13:27.2353710Z",
+  "memoryIds": [
+    "flowers",
+    "bell",
+    "snowflake",
+    "birthday"
+  ],
+  "modelSHA256": "39c968986f16cc7e7ec2e1e1a9bc097b651b58b15e72f9fcb3649f93b82fd7c4",
+  "whiteGift": true,
+  "snowflakeDisplayVersion": 12,
+  "files": {
+    "index.html": "ac30c2896be33cffbb4ca8e3cd2c661046acd4be10cc6b5f3735993bf072a2a3",
+    "app.js": "2352bc82883fe7d87e3c17ba833be738a1b585da2d0c6c3e1d3549458e3f937e",
+    "white-gift.js": "9e126b497fc2cf0f7424fbbddf7fb05add993e1c39f82b3e5dcb1ba3b81b50b0",
+    "snowflake-memory.js": "27424ee54fac1a108d2967a5a5b43b5876ced134858e5c5f474683faf7a19378",
+    "assets/memories.json": "c46cd376b7233f8097fb25a4382c2d26a8746121b75087c9bcaf2224fac86cd4",
+    "snowflake/ornament.js": "b8dd925dd596ec1e91d427fd02722a781037e303e9d724bd8e556930cacb04e8",
+    "snowflake/physics.js": "ef05d69955b005cb3d1480159dc0892c5a7c32437084ba16cf0ac4c3ef9f44b4",
+    "ticket-interaction.js": "35c7d7a15a5c425bb8bcd9afe544fc12c337cf1276be1adfb45d672c9da097b6"
+  }
+}

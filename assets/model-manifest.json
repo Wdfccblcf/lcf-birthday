@@ -1,0 +1,256 @@
+{
+  "version": "birthday-local-white-gift-20261010",
+  "model": {
+    "url": "./assets/lcf-bell-display-detail09.glb?v=39c968986f16",
+    "gzip": "./assets/lcf-bell-display-detail09.glb.gz?v=39c968986f16",
+    "bytes": 26121112,
+    "sha256": "39c968986f16cc7e7ec2e1e1a9bc097b651b58b15e72f9fcb3649f93b82fd7c4"
+  },
+  "paint": {
+    "url": "./assets/ritual-paint.bin",
+    "gzip": "./assets/ritual-paint.bin.gz",
+    "bytes": 2204240,
+    "sha256": "79c229b3b12a7da78d8888ca8c74ecd21904169d0a2bf3823bcf8690dbf23aea",
+    "visualStatus": "FAIL: rejected pigment, local design preview keeps it hidden"
+  },
+  "meshes": [
+    {
+      "mesh": 0,
+      "vertices": 523145,
+      "triangles": 1046350,
+      "colorOffset": 0,
+      "faceOffset": 1569435
+    },
+    {
+      "mesh": 1,
+      "vertices": 24535,
+      "triangles": 49066,
+      "colorOffset": 2092580,
+      "faceOffset": 2166185
+    },
+    {
+      "mesh": 2,
+      "vertices": 1538,
+      "triangles": 3080,
+      "colorOffset": 2190720,
+      "faceOffset": 2195334
+    },
+    {
+      "mesh": 3,
+      "vertices": 913,
+      "triangles": 1822,
+      "colorOffset": 2196872,
+      "faceOffset": 2199611
+    },
+    {
+      "mesh": 4,
+      "vertices": 929,
+      "triangles": 1854,
+      "colorOffset": 2200524,
+      "faceOffset": 2203311
+    }
+  ],
+  "referenceArtSHA256": "c76e4816387ba9848c3b430e679d266c6074233fa383690efca0ed31248b1b8b",
+  "geometryPolicy": "Original manufacturing file unchanged. Display09 preserves every original index and vertex order; only a measured left-eye surface patch and six thin spatula decoration positions/normals changed from display08. Mouth, fingers, other props, shoes, base and other four meshes are untouched. Continuous eye strokes and the round podium are reversible runtime display details.",
+  "sourceModel": {
+    "url": "./assets/lcf-bell-white.glb",
+    "gzip": "./assets/lcf-bell-white.glb.gz",
+    "bytes": 26121112,
+    "sha256": "fbc25093cb0b900e39d4b181afcb9b262fd6ccfb1b847127b9d0de3e114123ef"
+  },
+  "surfaceRefinement": {
+    "sourceSHA256": "fbc25093cb0b900e39d4b181afcb9b262fd6ccfb1b847127b9d0de3e114123ef",
+    "parentDisplaySHA256": "b43f30315f94240eba3af36361b2b8d48a6198fa3ae1431e0873c9702ae3035f",
+    "positionsChanged": 1490,
+    "normalsChanged": 1837,
+    "maximumPositionDeltaMM": 0.15102423818476565,
+    "regions": "accepted local outer eye-tail and isolated highlight correction plus current lower cheek surface refinement",
+    "protected": "mouth/tongue, smile eyes, fingers, bow, props, shoes, base",
+    "audit": "work/white-repair-20261009/cheek-polish08-manifest.json",
+    "verification": "work/white-repair-20261009/integrated-white-verification.json",
+    "visualStatus": "PARTIAL: local white surface improvement only; complete face proportions and final colour are not accepted"
+  },
+  "displayPaint": {
+    "url": "./assets/corridor-display-paint-10-3786bc484d28.bin?v=3786bc484d28",
+    "gzip": "./assets/corridor-display-paint-10-3786bc484d28.bin.gz?v=3786bc484d28",
+    "bytes": 2204240,
+    "sha256": "3786bc484d285b4d4720985d76b3858861b58418e85d140546831f4df85201c2",
+    "modelSHA256": "39c968986f16cc7e7ec2e1e1a9bc097b651b58b15e72f9fcb3649f93b82fd7c4",
+    "annotationModelSHA256": "5d46722be7c0121c140f0f3f24d746661b6223b64a09f07156c84afd878e3d8d",
+    "referenceArtSHA256": "c76e4816387ba9848c3b430e679d266c6074233fa383690efca0ed31248b1b8b",
+    "runtimeAllowed": false,
+    "visualStatus": "FAIL: user rejected this full-colour 3D appearance on 2026-10-10; preserved solely for rollback",
+    "meshes": [
+      {
+        "mesh": 0,
+        "offset": 0,
+        "groupOffset": 1569435,
+        "vertices": 523145
+      },
+      {
+        "mesh": 1,
+        "offset": 2092580,
+        "groupOffset": 2166185,
+        "vertices": 24535
+      },
+      {
+        "mesh": 2,
+        "offset": 2190720,
+        "groupOffset": 2195334,
+        "vertices": 1538
+      },
+      {
+        "mesh": 3,
+        "offset": 2196872,
+        "groupOffset": 2199611,
+        "vertices": 913
+      },
+      {
+        "mesh": 4,
+        "offset": 2200524,
+        "groupOffset": 2203311,
+        "vertices": 929
+      }
+    ],
+    "audit": "work/color-reveal-20261009/matched-paint-report.json",
+    "rejectedDisplayPaint": {
+      "url": "./assets/corridor-display-paint-09.bin",
+      "sha256": "4101e4b27b10eaf098990f1edb28c8781b268abcc47f3cff17ceed1fcc56a030",
+      "visualStatus": "FAIL: user rejected colour boundaries and palette on 2026-10-09"
+    }
+  },
+  "displayDetails": {
+    "parentDisplaySHA256": "5d46722be7c0121c140f0f3f24d746661b6223b64a09f07156c84afd878e3d8d",
+    "sha256": "39c968986f16cc7e7ec2e1e1a9bc097b651b58b15e72f9fcb3649f93b82fd7c4",
+    "bytes": 26121112,
+    "positionsChanged": 1798,
+    "normalsChanged": 2005,
+    "browVertices": 1781,
+    "maximumDeltaMM": 0.2049511491492227,
+    "maximumBrowFaceAngle": 28.0068257346784,
+    "browAreaRatio": [
+      0.5600106602491314,
+      1.7500492139219221
+    ],
+    "flattenedOrnaments": 6,
+    "ornamentFaces": [
+      971224,
+      971225,
+      971226,
+      971227,
+      971228,
+      971229,
+      971230,
+      971231,
+      971232,
+      971233,
+      971234,
+      971235,
+      971212,
+      971213,
+      971214,
+      971215,
+      971216,
+      971217,
+      971218,
+      971219,
+      971220,
+      971221,
+      971222,
+      971223
+    ],
+    "ornamentVertices": [
+      486650,
+      486658,
+      486659,
+      486663,
+      486665,
+      486842,
+      486843,
+      486844,
+      486845,
+      486846,
+      486847,
+      486848,
+      486849,
+      486850,
+      486851,
+      486852,
+      486853,
+      486854,
+      486855,
+      486856,
+      486857,
+      486858,
+      486859,
+      486860,
+      486861,
+      486862,
+      486863,
+      486864,
+      486865,
+      486866,
+      486867,
+      486868,
+      486869,
+      486870,
+      486871,
+      486872,
+      486873,
+      486874
+    ],
+    "topologyIdentical": true,
+    "otherMeshesIdentical": true,
+    "visualStatus": "PARTIAL: local eyebrow and spatula refinement only; complete face acceptance remains open",
+    "runtimeStrokes": "Two continuous 3D closed-eye strokes from fresh current ray picks",
+    "stage": "A thin separate circular display podium; original model base remains intact"
+  },
+  "frontPortrait": {
+    "runtimeAllowed": false,
+    "white": {
+      "url": "./assets/bell-front-white-smooth-v2.png?v=a12fdb84aec7",
+      "bytes": 878037,
+      "sha256": "a12fdb84aec73658502ca6cfa349976bf7b3a90c1b0f0ba10b3dd3f49a48c0e5",
+      "width": 1122,
+      "height": 1402
+    },
+    "colour": {
+      "url": "./assets/bell-front-colour-smooth-v2.png?v=82eb93e16d11",
+      "bytes": 1062683,
+      "sha256": "82eb93e16d11715839b18f77c29ccee5c9838a67a655d75550755c50ce7874d5",
+      "width": 1122,
+      "height": 1402
+    },
+    "sourceDisplaySHA256": "39c968986f16cc7e7ec2e1e1a9bc097b651b58b15e72f9fcb3649f93b82fd7c4",
+    "sourceModelSHA256": "fbc25093cb0b900e39d4b181afcb9b262fd6ccfb1b847127b9d0de3e114123ef",
+    "referenceArtSHA256": "c76e4816387ba9848c3b430e679d266c6074233fa383690efca0ed31248b1b8b",
+    "renderer": "Fixed front canvas compositor with the captured white silhouette and foreground-only top-to-bottom particle reveal",
+    "editing": "Built-in imagegen edit against the original art followed by a local base-surface retouch on both front images; original GLB and native silhouette retained",
+    "visualStatus": "PARTIAL: new fixed front candidate; browser checks and user colour acceptance are separate",
+    "scope": "Inactive rollback front assets User explicitly cancelled colour and requested true white GLB 360 gift on 2026-10-10",
+    "evidence": "work/front-colour-20261010/white-front-capture.json",
+    "prompt": "work/front-colour-20261010/image-edit-prompt.txt",
+    "silhouette": {
+      "url": "./assets/bell-front-white-v1.png?v=c7e15d42ae57",
+      "bytes": 469917,
+      "sha256": "c7e15d42ae57f5725e5b605afbd21d4fcd2c0d34c6adf4a15a022b363728b0d9",
+      "width": 1024,
+      "height": 1280
+    },
+    "baseSurface": "All large rectangular front display recesses filled in both white and coloured 2D images by latest user request; 3D manufacturing geometry untouched"
+  },
+  "whiteGift": {
+    "baseSurface": "Reversible runtime wafer at native y 9.90mm over measured flat top 9.72mm and shallow rim Recess floor 4.7mm Radius 43.0mm Original geometry untouched",
+    "reducedMotion": "300ms fixed front then offer without spin",
+    "runtimeAllowed": true,
+    "modelSHA256": "39c968986f16cc7e7ec2e1e1a9bc097b651b58b15e72f9fcb3649f93b82fd7c4",
+    "visualStatus": "PARTIAL user visual acceptance open Actual Codex browser 19 PASS 1 initial corrected FAIL no unresolved failures",
+    "evidence": "work/front-claim-20261010/base-inspection.json",
+    "claim": "One local browser flag with optional coupon PNG download No server fulfilment or delivery tracking",
+    "durationMS": 7400,
+    "renderer": "True white GLB one foreground 360 turn then optional gift coupon",
+    "sourceModelSHA256": "fbc25093cb0b900e39d4b181afcb9b262fd6ccfb1b847127b9d0de3e114123ef",
+    "verification": "work/front-claim-20261010/browser-white-gift-review.json",
+    "handoff": "HANDOFF-20261010-WHITE-GIFT.md"
+  }
+}

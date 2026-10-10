@@ -1,0 +1,19 @@
+/* Photographed mango cake; the wick position comes from the edited asset. */
+.candle-scene .cake-stage{width:min(430px,calc(100vw - 54px));height:auto;aspect-ratio:1;margin:0 0 10px}
+.cake-stage:before{display:none}
+.photo-cake{width:100%;height:100%;position:relative;z-index:2;filter:drop-shadow(0 20px 20px #0007)}
+.photo-cake img{display:block;width:100%;height:100%;object-fit:contain}
+.photo-fire{position:absolute;left:49.2%;top:10.5%;width:3.9%;height:6.2%;transform:translate(-50%,-100%);overflow:visible;pointer-events:none}
+.photo-fire .flame{transform-box:fill-box;transform-origin:50% 100%;filter:drop-shadow(0 0 5px #ffc26599);animation:photoFlicker 1.8s ease-in-out infinite}
+.photo-cake .photo-smoke{position:absolute;left:49.2%;top:10.5%;width:10%;height:17%;transform:translate(-50%,-100%);overflow:visible;pointer-events:none;opacity:0}
+.cake-stage .candle-glow{width:27%;height:27%;left:35.7%;top:-6%;background:radial-gradient(#ffc56a22,transparent 70%);z-index:1}
+.cake-stage .wish-dots{inset:12% -3% 0;pointer-events:none}
+.cake-stage .wish-dot{width:4px;height:4px;opacity:.7}
+.cake-stage.extinguished .photo-fire .flame{animation:photoFlameOut .65s ease-in forwards}
+.cake-stage.extinguished .photo-smoke{animation:photoSmoke 1s ease-out both}
+@keyframes photoFlicker{0%,100%{transform:rotate(-2deg) scale(.96,1)}50%{transform:rotate(2deg) scale(1.02,.97)}}
+@keyframes photoFlameOut{35%{transform:rotate(12deg) scale(.8)}100%{transform:rotate(17deg) scale(.05);opacity:0}}
+@keyframes photoSmoke{0%{opacity:0;transform:translate(-50%,-90%) scale(.8)}30%{opacity:.45}100%{opacity:0;transform:translate(-45%,-130%) scale(1.1)}}
+@media(max-width:760px){.candle-scene .cake-stage{width:min(345px,calc(100vw - 50px));margin-top:0;margin-bottom:4px}}
+@media(max-width:350px){.candle-scene .cake-stage{width:calc(100vw - 58px)}}
+@media(prefers-reduced-motion:reduce){.photo-fire .flame{animation:none;filter:none}.cake-stage.extinguished .photo-fire{display:none}.cake-stage.extinguished .photo-smoke{animation:none}}

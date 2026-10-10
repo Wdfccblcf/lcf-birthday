@@ -1,0 +1,38 @@
+{
+  "audited_at": "2026-10-05T13:26:58.781+08:00",
+  "scope": "LCF铃铛手办及公开360°生日展示网站的保留工作记录",
+  "token_usage": {
+    "total_tokens": 465767347,
+    "input_tokens": 462932306,
+    "cached_input_tokens": 436847872,
+    "noncached_input_tokens": 26084434,
+    "output_tokens": 2835041,
+    "noncached_input_plus_output_tokens": 28919475,
+    "distinct_request_records": 3837,
+    "saved_logs": 71,
+    "automatic_project_review_requests": 73,
+    "automatic_project_review_tokens_included": 2946104,
+    "display_value": "4.65",
+    "display_unit": "亿+"
+  },
+  "runtime": {
+    "finished_turns": 269,
+    "raw_duration_ms": 191147710,
+    "excluded_identified_user_wait_ms": 36015,
+    "recorded_execution_ms": 191111695,
+    "display_value": "53",
+    "display_unit": "小时+",
+    "definition": "模型处理、工具执行和执行回合内等待的累计时长；并行回合分别累计。已排除明确记录的用户回答等待，非人工工时或纯推理时长。"
+  },
+  "source_snapshot": {
+    "audited_at": "2026-10-05T02:52:59+08:00",
+    "unique_source_files": 184,
+    "nonempty_source_lines_including_comments": 13143
+  },
+  "documented_major_iterations": 12,
+  "limits": [
+    "保留记录可核验下限，不补估缺失请求和没有结束记录的回合。",
+    "缓存输入已包含在输入Token内，不重复相加。",
+    "Token处理量不等于账户额度百分比或账单费用。"
+  ]
+}

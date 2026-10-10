@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "entry": {
+    "caption": "生日之约",
+    "title": "回忆走廊",
+    "description": "有些小事想再陪你走一遍",
+    "actionLabel": "走近第一段回忆"
+  },
+  "memories": [
+    {
+      "id": "flowers",
+      "kind": "quiz",
+      "navLabel": "猜花名",
+      "caption": "一段小小的回忆",
+      "title": "还记得猜花名吗",
+      "description": "那次学校社团活动的题卡今天再翻开一次",
+      "actionLabel": "打开这张题卡",
+      "image": "./assets/memory-flower.jpg",
+      "quiz": {
+        "heading": "那次猜花名的活动",
+        "prompt": "这朵花叫什么",
+        "answer": "向日葵",
+        "acceptedAnswers": [
+          "向日葵",
+          "葵花"
+        ]
+      },
+      "reflection": [
+        "那次学校社团活动",
+        "我帮你准备了猜花名的题卡",
+        "问题在上面答案在下面",
+        "今天再陪你猜一次"
+      ]
+    },
+    {
+      "id": "bell",
+      "kind": "figurine",
+      "navLabel": "铃铛",
+      "caption": "这份生日礼物",
+      "title": "铃铛留在这里",
+      "description": "从一张原画慢慢做成的心意",
+      "actionLabel": "走近看看铃铛",
+      "image": "./assets/original-art.png"
+    },
+    {
+      "id": "snowflake",
+      "kind": "ornament",
+      "navLabel": "雪花吊饰",
+      "caption": "一件小小的收藏",
+      "title": "雪花吊饰",
+      "description": "轻轻拨动银环和垂下的吊坠",
+      "actionLabel": "走近看看雪花吊饰",
+      "image": "./assets/memory-snowflake-card-v1.png"
+    },
+    {
+      "id": "birthday",
+      "kind": "birthday",
+      "navLabel": "蛋糕",
+      "caption": "今天的生日之约",
+      "title": "蛋糕",
+      "description": "穿过森林里的这道门\n一份蛋糕等你许愿",
+      "actionLabel": "穿过森林之门"
+    }
+  ]
+}

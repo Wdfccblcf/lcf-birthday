@@ -1,0 +1,87 @@
+/* Centered invitation, a flexible paper edge, and a warm birthday arrival. */
+.letter-scene:not(.opening):not(.card) .envelope{animation:none}
+.envelope-front{background:linear-gradient(34deg,#19191b 49.8%,transparent 50%) left/50.1% 100% no-repeat,linear-gradient(-34deg,#171719 49.8%,transparent 50%) right/50.1% 100% no-repeat,linear-gradient(#19191b,#171719);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%)}
+.paper-peek{background:#1b1b1d}
+.card-stage .ticket .ticket-content{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 34px}
+.card-stage .ticket .ticket-overline{margin:0 0 13px;letter-spacing:.23em}
+.card-stage .ticket h2{margin:0;text-align:center}
+.card-stage .ticket .ticket-copy{margin:15px 0 0;text-align:center;line-height:1.85}
+.ticket-fine-rule{margin:15px auto 0;background:linear-gradient(90deg,transparent,#b38a4a,transparent)}
+.card-stage .ticket .letter-flower{top:19px;right:21px;width:26px;height:26px;font-size:18px;line-height:25px;opacity:.65}
+.drawn-card .drawn-ticket-title,.drawn-card .drawn-ticket-headline,.drawn-card .drawn-ticket-copy{text-align:center}
+.card-stage .ticket .ticket-stub.has-paper,.card-stage .ticket .ticket-stub.has-paper:hover:not(:disabled){background:none;box-shadow:none;transform:none;filter:none;-webkit-mask-image:none;mask-image:none;overflow:visible;will-change:auto}
+.ticket-stub.has-paper::before,.ticket-stub.has-paper::after{display:none}
+.ticket-stub.has-paper > .ticket-stub-label,.ticket-stub.has-paper > .ticket-stub-arrow{opacity:0}
+.stub-visual{position:absolute;inset:0;pointer-events:none;perspective:700px;transform-style:preserve-3d}
+.stub-paper{display:block;position:absolute;left:0;top:0;pointer-events:none}
+.stub-piece{position:absolute;left:0;width:100%;overflow:hidden;transform-origin:0 50%;backface-visibility:hidden}
+.stub-piece-face{position:absolute;left:0;width:100%;height:var(--paper-height);background:radial-gradient(ellipse at 35% 0,#87622c19,transparent 76%),linear-gradient(110deg,#161618,#1b1a1c);box-shadow:inset 0 1px 0 #c49e5c80,inset 0 -1px 0 #a982435b;-webkit-mask-image:radial-gradient(circle var(--ticket-notch) at 0 0,transparent 98%,#000 100%),radial-gradient(circle var(--ticket-notch) at 0 100%,transparent 98%,#000 100%),radial-gradient(circle var(--ticket-notch) at 100% 50%,transparent 98%,#000 100%);-webkit-mask-composite:source-in;mask-image:radial-gradient(circle var(--ticket-notch) at 0 0,transparent 98%,#000 100%),radial-gradient(circle var(--ticket-notch) at 0 100%,transparent 98%,#000 100%),radial-gradient(circle var(--ticket-notch) at 100% 50%,transparent 98%,#000 100%);mask-composite:intersect}
+.stub-piece-face::before{content:"";position:absolute;inset:var(--ticket-inset);border:1px solid #d4ae6257;border-left:0;box-shadow:inset 0 0 0 3px #101012,inset 0 0 0 4px #b68b3e16}
+.stub-piece-face::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#cbb17c70,transparent 17%,#ffffff08 47%,#0008);opacity:calc(var(--paper-curl,0)*.7);pointer-events:none}
+.stub-piece-face .ticket-stub-label{position:absolute;left:var(--paper-label-x);top:var(--paper-label-y);color:#ddbd82}
+.stub-piece-face .ticket-stub-arrow{position:absolute;left:var(--paper-arrow-x);top:var(--paper-arrow-y)}
+.ticket.is-returning .stub-piece{transition:transform .45s cubic-bezier(.16,.85,.3,1)}
+.ticket-stub.has-paper > .ticket-tear-line{z-index:3;opacity:1!important;clip-path:inset(calc(var(--rip-reveal,0)*100%) 0 0)}
+.ticket-content::after{width:2px;background:#b6a17b;opacity:1!important;mask-image:linear-gradient(to bottom,#000 0%,#000 calc(var(--rip-reveal,0)*100%),transparent calc(var(--rip-reveal,0)*100% + 1px));-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 calc(var(--rip-reveal,0)*100%),transparent calc(var(--rip-reveal,0)*100% + 1px))}
+body[data-stage="tearing"] .ticket-content{transform:translateY(calc(var(--ticket-exit,0)*12px)) scale(calc(1 + var(--ticket-exit,0)*.018));opacity:calc(1 - var(--ticket-exit,0))}
+body[data-stage="tearing"] .ticket-stub{opacity:calc(1 - var(--ticket-exit,0))}
+.ticket-tip{position:absolute;left:80%;top:calc(var(--rip-reveal,0)*100%);width:2px;height:16px;transform:translate(-1px,-50%);background:linear-gradient(transparent,#ecd39a,transparent);box-shadow:0 0 14px #e4bb7266;opacity:0;pointer-events:none}
+.ticket:is(.is-dragging,.is-torn) .ticket-tip{opacity:calc((1 - var(--paper-release,0))*.7)}
+.ticket-light{position:absolute;inset:-70% -20%;pointer-events:none;background:radial-gradient(ellipse at 72% 50%,#bd8e4228,transparent 52%);opacity:var(--paper-release,0);filter:blur(18px);z-index:-1}
+.ticket-flecks{position:absolute;inset:0;pointer-events:none;overflow:visible;opacity:0}
+.ticket:is(.is-dragging,.is-torn) .ticket-flecks{opacity:calc(var(--tear-progress,0)*(1 - var(--ticket-exit,0))*.5)}
+.ticket-flecks i{position:absolute;left:80%;width:2px;height:3px;background:#c6ab78;transform:translate(calc(var(--tear-progress,0)*var(--fleck-x)),calc(var(--tear-progress,0)*var(--fleck-y))) rotate(calc(var(--tear-progress,0)*var(--fleck-angle)));opacity:.6}
+body[data-stage="arrival"]{--bg:#09090b;--ink:#e9ca8e;--muted:#b8a07b;background:#09090b;color:#e9ca8e}
+body[data-stage="arrival"] .ambience{background:radial-gradient(ellipse at 50% 58%,#a17a311a,transparent 62%),#09090b}
+body[data-stage="arrival"] :is(.ambience:after,.aura,.orbit,#stars){display:none}
+body[data-stage="arrival"] .quiet-header{color:#d1ad6a;border-color:#bd95402a;padding-top:31px;padding-bottom:29px}
+.arrival-scene{position:relative;isolation:isolate;min-height:calc(100svh - 86px);overflow:clip;padding:55px 24px 65px}
+.birthday-gate{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.gate-halo{position:absolute;inset:6% 10%;background:radial-gradient(ellipse at 50% 65%,#c5974538,#8a65381a 28%,transparent 67%);opacity:var(--arrival-progress,0);filter:blur(24px)}
+.gate-curtain{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(90deg,#09090b,#181510);border:0 solid #cba55755;opacity:calc(1 - var(--arrival-progress,0));}
+.gate-curtain-left{left:0;border-right-width:1px;transform:translateX(calc(var(--arrival-progress,0)*-92%))}
+.gate-curtain-right{right:0;border-left-width:1px;transform:translateX(calc(var(--arrival-progress,0)*92%));background:linear-gradient(90deg,#181510,#09090b)}
+.arrival-copy{position:relative;text-align:center;opacity:clamp(0,calc(var(--arrival-progress,0)*2.2),1);transform:translateY(calc((1 - var(--arrival-progress,0))*16px));}
+.arrival-ornament{display:block;font:20px Georgia,serif;color:#d1b37f;margin-bottom:24px}
+.arrival-copy h2{font:400 clamp(34px,4.2vw,56px)/1.5 "Songti SC","SimSun",serif;letter-spacing:.06em;color:#ecd4a4}
+.arrival-copy h2 span{display:block}.arrival-copy h2 strong{display:block;font:italic 1.5em/1.1 Georgia,serif;letter-spacing:-.02em;margin-top:3px;background:linear-gradient(115deg,#b18d50,#fff0bd 46%,#c6a265);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.arrival-copy p{font:16px/2 "Songti SC","SimSun",serif;color:#bcaa8d;margin-top:28px;letter-spacing:.1em}
+.birthday-continue{display:inline-flex;align-items:center;gap:24px;min-height:48px;padding:12px 4px;border:0;border-bottom:1px solid #af8e4e80;border-radius:0;background:none;font-size:13px;letter-spacing:.08em;color:#e2c18a;margin-top:30px}
+.birthday-continue span{display:inline-grid;place-items:center;width:29px;height:29px;border:1px solid #b18e5155;border-radius:50%}
+.birthday-continue:hover:not(:disabled){background:none;transform:translateY(-2px);color:#fff0c9}
+#birthday-motes{position:absolute;inset:0;pointer-events:none;opacity:var(--arrival-progress,0)}
+.birthday-mote{position:absolute;width:2px;height:2px;border-radius:50%;background:#d4b274;opacity:.14;animation:birthdayDust var(--mote-time,20s) var(--mote-delay,0s) ease-in-out infinite alternate}
+.birthday-mote.glint{width:3px;height:3px;opacity:.28;box-shadow:0 0 10px #e3bf6c66}
+@keyframes birthdayDust{from{transform:translate(0,12px);opacity:.08}to{transform:translate(5px,-24px);opacity:.24}}
+body[data-stage="candle"] .photo-cake{animation:birthdayCakeIn 1.2s cubic-bezier(.16,.72,.24,1) both}
+@keyframes birthdayCakeIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+body[data-stage="candle"] .wish-dots{opacity:0}
+body.save-data .birthday-mote{animation:none}
+@media(max-width:760px){
+ body[data-stage="arrival"] .quiet-header{padding-top:22px;padding-bottom:22px}
+ .card-stage .ticket .ticket-content{padding:14px 21px}
+ .card-stage .ticket .ticket-overline{margin-bottom:9px;font-size:8px}
+ .card-stage .ticket h2{font-size:clamp(19px,6vw,30px)}
+ .card-stage .ticket .ticket-copy{font-size:clamp(11px,3vw,14px);line-height:1.7;margin-top:10px}
+ .card-stage .ticket .letter-flower{width:20px;height:20px;font-size:14px;line-height:19px;top:12px;right:13px}
+ .ticket-fine-rule{margin-top:9px;width:26px}
+ .arrival-scene{min-height:calc(100svh - 70px);padding:40px 24px 50px}
+ .arrival-copy h2{font-size:34px}.arrival-copy p{font-size:14px;line-height:1.9;margin-top:24px}
+ .birthday-mote:nth-child(3n){display:none}
+}
+@media(max-width:350px){
+ .card-stage .ticket .ticket-content{padding:9px 17px}
+ .card-stage .ticket .ticket-overline{font-size:7px;margin-bottom:5px}
+ .card-stage .ticket h2{font-size:18px}
+ .card-stage .ticket .ticket-copy{font-size:10.5px;line-height:1.6;margin-top:7px}
+ .ticket-fine-rule{margin-top:5px}.card-stage .ticket .letter-flower{top:10px;right:10px;width:17px;height:17px;font-size:12px;line-height:16px}
+ .arrival-copy h2{font-size:29px}.arrival-copy p{font-size:13px}.arrival-ornament{margin-bottom:19px}
+}
+@media(prefers-reduced-motion:reduce){
+ .stub-visual{display:none}.ticket-stub.has-paper > .ticket-stub-label,.ticket-stub.has-paper > .ticket-stub-arrow{opacity:1}
+ .card-stage .ticket .ticket-stub.has-paper{background:linear-gradient(180deg,#202022,#19191b 65%,#171719);border:0;box-shadow:inset 0 1px 0 #bd954d9e,inset 0 -1px 0 #b088485b;-webkit-mask-image:radial-gradient(circle var(--ticket-notch) at 0 0,transparent 98%,#000 100%),radial-gradient(circle var(--ticket-notch) at 0 100%,transparent 98%,#000 100%),radial-gradient(circle var(--ticket-notch) at 100% 50%,transparent 98%,#000 100%);-webkit-mask-composite:source-in;mask-image:radial-gradient(circle var(--ticket-notch) at 0 0,transparent 98%,#000 100%),radial-gradient(circle var(--ticket-notch) at 0 100%,transparent 98%,#000 100%),radial-gradient(circle var(--ticket-notch) at 100% 50%,transparent 98%,#000 100%);mask-composite:intersect}
+ .ticket-stub.has-paper::before{display:block;box-shadow:none}
+ .ticket-tip,.ticket-light,.ticket-flecks,.birthday-mote,.gate-curtain{display:none!important}
+ .ticket.is-returning .stub-piece{transition:none}.arrival-copy{transform:none}
+ body[data-stage="tearing"] .ticket-content{transform:none}.photo-cake{animation:none!important}
+}

@@ -1,0 +1,44 @@
+/* User review: a clean birthday letter, sequential opening and a mango wish. */
+.quiet-header{justify-content:flex-start}.quiet-header .monogram i{display:none}
+.scene{min-height:calc(100svh - 86px)}
+.letter-scene{position:relative;align-items:center;min-height:calc(100svh - 86px)}
+.letter-scene.opening,.letter-scene.card{display:grid;grid-template-columns:.92fr 1.08fr;gap:8%;width:min(1200px,84%);padding:70px 0 82px;min-height:var(--letter-stage-height,calc(100svh - 86px))}
+.letter-scene.opening .entry-copy,.letter-scene.card .entry-copy{display:block;visibility:hidden;opacity:0}
+.letter-scene.opening .letter-object,.letter-scene.card .letter-object{width:auto;max-width:none;padding:52px 0 12px}
+.letter-scene.opening .envelope-wrap,.letter-scene.card .envelope-wrap{width:100%;max-width:535px;aspect-ratio:1.5;transform:rotate(-5deg)}
+.envelope-address{bottom:11%;gap:0}.envelope-address strong{font-family:"Songti SC","SimSun",serif;font-size:29px;letter-spacing:.13em;line-height:1.5}
+.card-stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:30px 0;pointer-events:none;z-index:8}
+.card-stage .letter,.letter-scene.opening .card-stage .letter,.letter-scene.card .card-stage .letter{position:relative;inset:auto;width:min(420px,100%);max-width:100%;margin:0;opacity:0;transform:none;animation:none;pointer-events:none}
+.card-stage .letter .letter-flower{margin:5px auto 26px}.card-stage .letter h2{margin-bottom:24px}
+.letter-scene.present-card .card-stage .letter{opacity:1;animation:presentBirthdayCard .95s cubic-bezier(.22,.52,.24,1) both}
+.letter-scene.card .card-stage .letter{opacity:1;transform:none;animation:none;pointer-events:auto}
+.drawn-card{position:absolute;z-index:2;left:calc(50% - var(--draw-width,160px)/2);top:var(--draw-top,10px);width:var(--draw-width,160px);height:var(--draw-height,180px);background:radial-gradient(ellipse at 8% 0,#3b332422,transparent 65%),linear-gradient(127deg,#222224,#101011 65%,#1b1b1d);box-shadow:0 1px 0 #c59a4d88,inset 0 0 0 1px #95713788;border-radius:1px;display:block;pointer-events:none;opacity:0}
+.drawn-card:after{content:"";position:absolute;inset:calc(12px * var(--draw-scale,.5));border:1px solid #d3a95a80;box-shadow:inset 0 0 0 2px #1a1a1c;pointer-events:none}
+.drawn-card span{position:absolute;left:50%;top:var(--draw-mark-top,15px);transform:translateX(-50%);width:var(--draw-mark-size,24px);height:var(--draw-mark-size,24px);border:1px solid #b88b3d88;border-radius:50%;font:italic var(--draw-mark-font,16px)/var(--draw-mark-size,24px) Georgia,serif;color:#d2ae63;text-align:center}
+.letter-scene.opening .letter-object{animation:lowerBirthdayEnvelope 2.8s ease both}
+.letter-scene.opening .envelope{top:0;height:100%;animation:none;z-index:3;transform:none;opacity:1}
+.letter-scene.opening .envelope :is(.envelope-back,.paper-peek,.envelope-front,.envelope-address){animation:emptyEnvelope 2.8s ease both}
+.letter-scene.opening .envelope-flap{z-index:5;transform:none;transition:none;animation:openBirthdayFlap 2.8s ease both,emptyEnvelope 2.8s ease both}
+.letter-scene.opening .wax-seal{transition:none;animation:releaseBirthdaySeal 2.8s ease both}
+.letter-scene.opening .drawn-card{opacity:1;animation:drawBirthdayCard 2.8s ease both}
+.letter-scene.opening.present-card .drawn-card{visibility:hidden}
+.letter-scene.opening .open-hint,.letter-scene.card .open-hint{display:flex;visibility:hidden;opacity:0}
+.letter-scene.card .letter-object{visibility:hidden;pointer-events:none;overflow:clip}
+.viewer-tools{margin-top:16px}.viewer-tools summary{width:42px;height:42px;padding:8px;display:inline-flex;justify-content:center;border:1px solid #b4957c55;border-radius:50%;gap:0}.viewer-tools[open] summary{background:#e8dacf70}.final-actions{margin-top:23px}
+.gallery-arch{inset:14px 5% 12px}.gallery-stage{padding-bottom:12px}
+body:is([data-stage="candle"],[data-stage="wishing"],[data-stage="listening"],[data-stage="extinguishing"],[data-stage="blessing"]){--bg:#0b0b0e;--ink:#eddbb5;--muted:#ab9272;--gold:#d1aa68;--pink:#d7b781;background:#0b0b0e;color:#eddbb5}
+body:is([data-stage="candle"],[data-stage="wishing"],[data-stage="listening"],[data-stage="extinguishing"],[data-stage="blessing"]) .ambience{background:radial-gradient(ellipse at 50% 48%,#c78c3420,transparent 48%),linear-gradient(135deg,#151318,#08080b 68%)}
+body:is([data-stage="candle"],[data-stage="wishing"],[data-stage="listening"],[data-stage="extinguishing"],[data-stage="blessing"]) .ambience:after{display:none}
+body:is([data-stage="candle"],[data-stage="wishing"],[data-stage="listening"],[data-stage="extinguishing"],[data-stage="blessing"]) :is(.aura,.orbit,#stars){display:none}
+body:is([data-stage="candle"],[data-stage="wishing"],[data-stage="listening"],[data-stage="extinguishing"],[data-stage="blessing"]) .quiet-header{color:#d2af70;border-color:#c1964826}
+.candle-scene h2{font-size:clamp(31px,3.2vw,44px);color:#e5c88c;letter-spacing:.07em;margin:12px 0 13px}.scene-subtitle{color:#baa27f}.cake-stage{height:325px;margin:5px 0 18px}.candle-glow{background:radial-gradient(circle,#ffd68930,#dca64d13 43%,transparent 70%)}
+.candle-scene .primary{background:linear-gradient(110deg,#c6974933,#c49c4b16);border-color:#b28a4a;color:#eed39f;border-radius:2px;min-height:49px;box-shadow:0 7px 25px #0004}.candle-scene .primary:hover{background:#c7984936}.mic-note{color:#9d896e}.wish-status{color:#d7b880}.blessing-copy,.blessing-scene h2{color:#eadab9}
+@keyframes releaseBirthdaySeal{0%,7%{opacity:1;transform:rotate(5deg) translateY(0)}17%,100%{opacity:0;transform:rotate(8deg) translateY(-12px)}}
+@keyframes openBirthdayFlap{0%,17%{transform:rotateX(0);z-index:5}41%,100%{transform:translateZ(-12px) rotateX(178deg);z-index:1}}
+@keyframes lowerBirthdayEnvelope{0%,15%{transform:translateY(0)}39%,100%{transform:translateY(56px)}}
+@keyframes drawBirthdayCard{0%,41%{transform:translateY(0)}75%,100%{transform:translateY(calc(-1 * var(--draw-distance,180px)))}}
+@keyframes emptyEnvelope{0%,65%{opacity:1}69%,100%{opacity:0}}
+@keyframes presentBirthdayCard{from{transform:translate(var(--card-from-x,0px),var(--card-from-y,0px)) rotate(var(--card-from-angle,-5deg)) scale(var(--card-from-scale,1));opacity:1}to{transform:translate(0,0) rotate(0) scale(1);opacity:1}}
+@media(max-width:760px){.scene{min-height:calc(100svh - 66px)}.letter-scene{min-height:calc(100svh - 66px);align-content:center;grid-auto-rows:max-content}.letter-scene.opening,.letter-scene.card{grid-template-columns:1fr;gap:29px;width:100%;padding:34px 29px 28px;min-height:var(--letter-stage-height,calc(100svh - 66px))}.letter-scene.opening .letter-object,.letter-scene.card .letter-object{width:min(345px,100%);padding:32px 0 0;margin:auto}.letter-scene.opening .envelope-wrap,.letter-scene.card .envelope-wrap{width:94%;max-width:335px;aspect-ratio:1.5;transform:rotate(-5deg)}.card-stage{padding:28px 20px}.card-stage .letter,.letter-scene.opening .card-stage .letter,.letter-scene.card .card-stage .letter{width:min(355px,100%)}.envelope-address{bottom:11%}.envelope-address strong{font-size:21px;letter-spacing:.1em}.scene-subtitle{max-width:320px}.cake-stage{height:285px;margin:4px 0 16px}.candle-scene h2{font-size:31px}.final-actions{margin-top:17px}.gallery-arch{inset:8px 4% 0}}
+@media(max-width:350px){.letter-scene.opening,.letter-scene.card{padding:28px 25px 24px;gap:26px}.envelope-address strong{font-size:18px}.card-stage{padding:25px 20px}.card-stage .letter .letter-flower{margin-bottom:19px}.card-stage .letter h2{margin-bottom:18px}.cake-stage{height:245px}.candle-scene h2{font-size:28px}}
+@media(prefers-reduced-motion:reduce){.letter-scene.opening .letter-object{visibility:hidden}.letter-scene.present-card .card-stage .letter{animation:none;transform:none}.letter-scene.opening .entry-copy,.letter-scene.card .entry-copy{transition:none}}

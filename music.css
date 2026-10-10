@@ -1,0 +1,5 @@
+.music-toggle{position:fixed;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));z-index:15;display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border:0;border-radius:50%;background:transparent;color:#dcc39c;box-shadow:none;transform:none}
+.music-toggle[hidden]{display:none}.music-toggle svg{width:14px;height:14px;opacity:.35;transition:opacity .25s}.music-toggle:hover{transform:none;background:transparent;box-shadow:none}.music-toggle:hover svg,.music-toggle:focus-visible svg{opacity:1}.music-toggle[data-playing="false"] .music-wave{display:none}.music-toggle:focus-visible{outline:1px solid #f8d9a18c;outline-offset:-5px}
+.music-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body.is-model .music-toggle{background:transparent;color:#775b46}
+@media(prefers-reduced-motion:reduce){.music-toggle svg{transition:none}}

@@ -1,0 +1,77 @@
+/* A guided memory room, with the personal flower game as its first exhibit. */
+body:is([data-stage="corridor"],[data-stage="party"]){--bg:#0d0c0b;--ink:#ead8b5;--gold:#d8b477;--muted:#b5a084;background:#0d0c0b;color:#ead8b5}
+body:is([data-stage="corridor"],[data-stage="party"]) .quiet-header{color:#d1ad6a;border-color:#a77f3933;padding-top:31px;padding-bottom:29px}
+body:is([data-stage="corridor"],[data-stage="party"]) :is(.ambience,.monogram i){display:none}
+.corridor-scene{position:relative;min-height:570px;height:calc(100svh - 86px);overflow:clip;isolation:isolate}
+.corridor-host,.corridor-shade{position:absolute;inset:0}
+.corridor-host canvas{display:block;width:100%;height:100%;touch-action:none;outline-offset:-8px}
+.corridor-shade{pointer-events:none;background:linear-gradient(180deg,#06060665,transparent 19%,transparent 52%,#090807ed 96%)}
+.corridor-stops{position:absolute;top:18px;left:50%;transform:translateX(-50%);display:flex;gap:6px;max-width:calc(100% - 36px);padding:5px;background:#11100ce3;border:1px solid #a6814333;border-radius:32px;box-shadow:0 8px 26px #0005;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain}
+.corridor-stops button{white-space:nowrap;border:0;border-radius:24px;padding:10px 17px;background:none;color:#c0ad8c;font-size:12px;letter-spacing:.04em;min-height:38px}
+.corridor-stops button[aria-current="step"]{background:#95714126;color:#f1dba9}
+.corridor-copy{position:absolute;bottom:96px;left:max(7vw,26px);max-width:min(440px,calc(100vw - 52px));pointer-events:none}
+.corridor-overline{font-size:10px;letter-spacing:.22em;color:#baa077;margin-bottom:15px}
+.corridor-copy h2{color:#ecd7ad;font-size:clamp(29px,3vw,40px);letter-spacing:.05em;line-height:1.45}
+#corridor-description{font:14px/1.9 "Microsoft YaHei",sans-serif;letter-spacing:.05em;color:#c1b092;margin-top:13px;max-width:310px;white-space:pre-line}
+.quiet-header .monogram{text-decoration:none;border:0;box-shadow:none;color:inherit}.quiet-header .monogram:focus-visible{outline:1px solid #d8b477;outline-offset:6px}
+#wish-hint{white-space:pre-line}
+.corridor-scene.gate-opening :is(.corridor-copy,.corridor-stops,.corridor-navigation){opacity:.12;transition:opacity .6s}.corridor-scene.gate-opening #corridor-canvas{cursor:default}.corridor-scene.birthday-stop:not(.gate-opening) #corridor-canvas{cursor:pointer}
+#portal-flash{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:0;background:radial-gradient(ellipse at 50% 45%,#fff,#fff9e8 65%,#fffaf5);will-change:opacity}#portal-flash[hidden]{display:none}
+.corridor-copy .birthday-continue{pointer-events:auto;margin-top:17px;min-height:44px;gap:19px;font-size:12px}
+.corridor-navigation{position:absolute;bottom:25px;left:max(7vw,26px);right:max(7vw,26px);display:flex;align-items:center;gap:20px;justify-content:flex-start;color:#9c896d;font-size:11px;letter-spacing:.12em}
+.corridor-navigation button{background:#18150f80;border:1px solid #a383493c;border-radius:50%;width:38px;height:38px;font-size:17px;color:#dbc394}
+.corridor-navigation button:disabled{opacity:.28}
+.corridor-error{position:absolute;inset:20% 7%;background:#10100df5;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:28px;text-align:center;padding:30px;z-index:3;border:1px solid #b08a4660;color:#dfc496}
+.corridor-error button{min-height:44px;background:#b48f4530;border:1px solid #b08a46;color:#e3c58e;padding:10px 20px}
+.flower-memory{width:min(490px,calc(100vw - 30px));max-height:calc(100svh - 30px);margin:auto;padding:0;border:1px solid #e4cf9a66;background:#f3ecd9;color:#4e4032;border-radius:3px;box-shadow:0 28px 85px #0009;overflow:auto;color-scheme:light}
+.flower-memory::backdrop{background:#080705bf;backdrop-filter:blur(8px)}
+.flower-card{padding:29px 31px 0;background:radial-gradient(ellipse at 12% 0,#fffaf1,transparent 65%),#f3ecd9}
+.memory-close{position:absolute;right:8px;top:8px;z-index:3;border:0;background:none;width:34px;height:34px;color:#7f694a;font-size:23px;line-height:1;display:grid;place-items:center}
+.memory-overline{font-size:10px;letter-spacing:.19em;color:#a18454;text-align:center;margin:1px 0 14px}
+.flower-question h2{font-size:24px;letter-spacing:.08em;text-align:center;color:#5a442e;margin-bottom:20px;overflow-wrap:anywhere}
+.flower-question img{display:block;width:100%;height:auto;aspect-ratio:1.5;object-fit:cover;box-shadow:0 2px 4px #39291714;border:5px solid #fffcf4}
+.flower-memory[data-kind="quiz"]:has(.flower-answer.is-open) .flower-question img{height:clamp(135px,22svh,195px);object-fit:contain;background:#fffcf4}
+.flower-memory[data-kind="photo"] .flower-question img{max-height:45svh;object-fit:contain;background:#fffcf4}
+.flower-memory[data-kind="photo"] .flower-answer{margin-top:24px;border-top:1px solid #a78d6033}
+.flower-photo-status{text-align:center;padding-top:13px;font-size:12px;color:#8d7350}.flower-photo-status button{border:1px solid #9d7f5466;background:none;color:inherit;margin-top:10px;padding:10px 14px;min-height:40px;font-size:12px}
+#flower-guess{display:flex;gap:7px;padding:20px 0 23px;align-items:center}
+#flower-answer-input{min-width:0;flex:1;border:0;border-bottom:1px solid #ad956e88;background:transparent;padding:11px 4px;border-radius:0;font:12px "Microsoft YaHei",sans-serif;color:#53412c;outline-offset:3px}
+#flower-answer-input:focus-visible{outline:2px solid #997644}
+#flower-guess button{border:1px solid #997b514f;background:#8060390d;color:#73542c;min-height:40px;padding:8px 13px;font-size:12px;white-space:nowrap;letter-spacing:.03em}
+.flower-answer{position:relative;min-height:69px;margin:0 -31px;padding:24px 31px 28px;border-top:1px dashed #a78d60;perspective:800px;overflow:clip;transition:height .85s cubic-bezier(.2,.65,.22,1)}
+.flower-answer::before,.flower-answer::after{content:"";position:absolute;top:-7px;width:13px;height:13px;border-radius:50%;background:#0d0b09}
+.flower-answer::before{left:-7px}.flower-answer::after{right:-7px}
+.flower-answer-fold{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:24px;background:linear-gradient(120deg,#e6dbc5,#f1e5d0);color:#9d865f;font-size:11px;letter-spacing:.18em;transform-origin:50% 0%;backface-visibility:hidden;transition:transform .85s cubic-bezier(.2,.65,.22,1),opacity .6s;z-index:1;border-bottom:1px solid #b7a28040;pointer-events:none}
+.flower-answer.is-open .flower-answer-fold{transform:rotateX(-172deg);opacity:0}
+.flower-answer-inside{text-align:center;animation:answerInk .75s .2s both}
+#flower-feedback{font-size:11px;color:#a38c66;min-height:16px;margin:3px 0 4px}
+.flower-answer h3{font:400 29px/1.6 "Songti SC","SimSun",serif;letter-spacing:.22em;color:#76532c;margin:0 0 12px}
+.memory-note{font:13px/2 "Songti SC","SimSun",serif;color:#857157;letter-spacing:.04em;white-space:pre-line;overflow-wrap:anywhere}
+#memory-continue{margin-top:22px;padding:9px 4px;min-height:40px;color:#745637;background:none;border:0;border-bottom:1px solid #9a7f5377;font-size:12px;letter-spacing:.1em}
+@keyframes answerInk{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.exhibit-return{border:0;border-bottom:1px solid #98725755;background:transparent;font-size:12px;color:#8a6370;padding:10px 0;min-height:42px;letter-spacing:.06em}
+.party-scene{position:relative;isolation:isolate;text-align:center;min-height:calc(100svh - 86px);padding:65px 24px 70px}
+.party-scene h2{font-size:clamp(35px,4vw,52px);color:#e6cfa4;line-height:1.7}.party-scene h2 em{display:block;font:italic 1.45em/1.2 Georgia,serif;color:#e4c188}
+.party-scene>p{margin-top:29px;font:14px/2.2 "Songti SC","SimSun",serif;letter-spacing:.06em;color:#b9a587}
+.party-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 26px;margin-top:35px}
+.party-actions button{background:none;border:0;border-bottom:1px solid #a6885359;min-height:46px;padding:10px 3px;font-size:12px;color:#d4b887;letter-spacing:.08em}
+body[data-stage="party"] .making-records{color:#baa98e;border-color:#b6934f33}
+body[data-stage="party"] .making-records .making{color:#baa98e}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:760px){
+ body:is([data-stage="corridor"],[data-stage="party"]) .quiet-header{padding-top:22px;padding-bottom:22px}
+ .corridor-scene{height:calc(100svh - 70px);min-height:560px}.corridor-stops{top:14px;gap:2px;padding:4px}.corridor-stops button{padding:8px 12px;font-size:11px;min-height:36px}
+ .corridor-scene.birthday-stop .corridor-host{bottom:220px}
+ .corridor-scene.birthday-stop .corridor-host::after{content:"";position:absolute;inset:auto 0 0;height:95px;pointer-events:none;background:linear-gradient(transparent,#0d0c0b)}
+ .corridor-copy{bottom:97px;left:26px}.corridor-overline{font-size:9px;margin-bottom:11px}.corridor-copy h2{font-size:28px}#corridor-description{font-size:12px;max-width:255px;margin-top:10px}.corridor-navigation{left:26px;bottom:23px}
+ .flower-card{padding:26px 24px 0}.flower-answer{margin:0 -24px;padding:22px 24px 25px}.flower-question h2{font-size:22px;margin-bottom:16px}.memory-overline{font-size:9px}
+ .party-scene{min-height:calc(100svh - 70px);padding:54px 24px}.party-scene h2{font-size:33px}
+}
+@media(max-width:350px){.corridor-stops button{padding:8px 9px;font-size:10px}.corridor-copy h2{font-size:26px}.flower-card{padding:24px 18px 0}.flower-answer{margin:0 -18px;padding:20px 18px 25px}.flower-question h2{font-size:20px}#flower-guess{gap:5px}#flower-guess button{padding:8px;font-size:11px}#flower-answer-input{font-size:11px}.party-actions{gap:11px 18px}}
+@media(max-width:760px) and (max-height:740px){.corridor-scene.birthday-stop{min-height:740px}.corridor-scene.birthday-stop .corridor-host{bottom:300px}}
+@media(max-height:650px){
+ .flower-card{padding-top:18px}.memory-overline{margin-bottom:9px}.flower-question h2{font-size:20px;margin-bottom:12px}
+ .flower-memory[data-kind="quiz"]:has(.flower-answer.is-open) .flower-question img{height:110px}
+ #flower-guess{padding:10px 0 14px}.flower-answer{padding-top:14px;padding-bottom:17px}.flower-answer h3{font-size:24px;margin-bottom:7px}.memory-note{font-size:12px;line-height:1.8}#memory-continue{margin-top:10px;min-height:36px}
+}
+@media(prefers-reduced-motion:reduce){.flower-answer,.flower-answer-fold{transition:none}.flower-answer-inside{animation:none}.corridor-stops button{transition:none}.flower-memory::backdrop{backdrop-filter:none}}

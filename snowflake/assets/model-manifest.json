@@ -1,0 +1,428 @@
+{
+  "asset": "snowflake-ornament.glb",
+  "version": 9,
+  "authoring": "Blender 5.2.2 LTS + OpenCV photograph-projected reconstruction",
+  "scale": "relative units; not measured physical dimensions",
+  "sourcePhotos": [
+    25,
+    26,
+    23,
+    27,
+    20,
+    18,
+    1,
+    3
+  ],
+  "parts": [
+    "OuterRing",
+    "MiddleRing",
+    "InnerRing",
+    "SnowflakeCore",
+    "TopMount",
+    "UpperLeft",
+    "UpperRight",
+    "UpperCenter",
+    "CrystalBranch1",
+    "CrystalBranch2",
+    "CrystalBranch3",
+    "CrystalBranch4",
+    "BlueBranch",
+    "CrystalBranch1Chain",
+    "CrystalBranch1Payload",
+    "CrystalBranch2Chain",
+    "CrystalBranch2Payload",
+    "CrystalBranch3Chain",
+    "CrystalBranch3Payload",
+    "CrystalBranch4Chain",
+    "CrystalBranch4Payload",
+    "BlueBranchChain",
+    "BlueBranchPayload"
+  ],
+  "meshCount": 64,
+  "vertices": 154939,
+  "triangles": 268100,
+  "structure": {
+    "rings": 3,
+    "clearDropBranches": 4,
+    "blueBeadBranches": 1,
+    "upperChains": 3,
+    "connectorClaspCount": 5,
+    "independentConnectorObjects": 0,
+    "pendantChainSegments": 10,
+    "lowerAttachedJumpRings": 6
+  },
+  "surfaceProjection": {
+    "method": "photographic surface projection onto an extruded silhouette",
+    "sources": [
+      {
+        "photo": 25,
+        "role": "symmetric medallion pattern"
+      },
+      {
+        "photo": 26,
+        "role": "small charm pattern and real cut-glass facets"
+      },
+      {
+        "photo": 23,
+        "role": "outer engraving"
+      }
+    ],
+    "confirmedByUser": [
+      "snowflake has matching symmetric pattern and relief on both surfaces; no designated front/back"
+    ],
+    "cvVersion": "5.0.0",
+    "limitations": [
+      "small occluded left rim repaired from the opposite arm of the same photographed pattern",
+      "matching pattern and relief duplicated using user-confirmed symmetry",
+      "relief height and absolute dimensions are approximations",
+      "crystal texture includes photographed appearance rather than measured view-dependent reflection"
+    ],
+    "upperAttachmentCorrection": {
+      "evidencePhoto": "8d21e9206fc9e3fd91d627e906d881c4.jpg",
+      "projectedPhoto": 25,
+      "localHoleXY": [
+        0.0071522235236270324,
+        0.7273479739319626
+      ],
+      "radius": 0.025,
+      "removedSurfaceFaces": 86,
+      "addedHoleWalls": 28,
+      "scope": "local upper hole and connector correction only; all embedded photo textures unchanged"
+    },
+    "orientationCorrection": {
+      "evidencePhotos": [
+        "886b6028a6cc2c11dc752f37b9c3a004.jpg",
+        "3ff51949e54b909f102b7ff64d914c1a.jpg",
+        "9f3cc420d6a2810a5dbc76469f0b8be8.jpg"
+      ],
+      "rotationAboutLocalYRadians": -0.2055653265386843,
+      "rotationDegrees": -11.778025624895227,
+      "topology": "eight-point main snowflake; top and bottom poles vertical, opposite side arms horizontal",
+      "method": "in-plane rotation and continuous eight-sector correction of the oblique photographic outline; image bytes, UV, relief depth and surrounding rings retained",
+      "sourceTipsXY": [
+        [
+          -0.008420713245868683,
+          0.6560043692588806
+        ],
+        [
+          0.568931519985199,
+          0.42958053946495056
+        ],
+        [
+          0.7802159190177917,
+          -0.025265609845519066
+        ],
+        [
+          0.5756307244300842,
+          -0.606035053730011
+        ],
+        [
+          -0.011393341235816479,
+          -0.8264011740684509
+        ],
+        [
+          -0.5884566307067871,
+          -0.5652247071266174
+        ],
+        [
+          -0.7799742817878723,
+          0.0177884753793478
+        ],
+        [
+          -0.5753890872001648,
+          0.5985579490661621
+        ]
+      ],
+      "targetTipsXY": [
+        [
+          0.0,
+          0.775
+        ],
+        [
+          0.52,
+          0.52
+        ],
+        [
+          0.775,
+          0.0
+        ],
+        [
+          0.52,
+          -0.52
+        ],
+        [
+          0.0,
+          -0.775
+        ],
+        [
+          -0.52,
+          -0.52
+        ],
+        [
+          -0.775,
+          0.0
+        ],
+        [
+          -0.52,
+          0.52
+        ]
+      ],
+      "maximumOutlineCorrection": 0.11929320411090479,
+      "upperHoleLocal": [
+        0.0071522235236270324,
+        0,
+        -0.7273479739319626
+      ],
+      "centerAnchorLocal": [
+        0.0071522235236270324,
+        0,
+        -0.9253479739319626
+      ]
+    },
+    "charmOrientationCorrection": {
+      "evidencePhotos": [
+        "c51227ad07c98fc19df7626f8b47d680.jpg",
+        "27e2a42ee4764907d21a93f44d31a2a4.jpg"
+      ],
+      "rotationDegrees": 90,
+      "topology": "six-point charm; chain and payload connect to opposing single leaf tips",
+      "method": "rigid rotation of original photographic mesh about its photo centre, without changing photo pixels or UV"
+    },
+    "rimCorrection": {
+      "scope": "Planar displacement only at pixel-sized silhouette steps, smooth side normals; relief depth, photo images, UV and central hole unchanged",
+      "maximumCorePlanarShift": 0.0025,
+      "maximumCharmPlanarShift": 0.0012,
+      "evidence": "cfab3927091bbd388aa9d262bf082e9e.jpg and saved mask review"
+    }
+  },
+  "assumptions": [
+    "Two corresponding surfaces use the user-confirmed symmetric snowflake geometry and same photographic pattern",
+    "Surface relief depth is approximate",
+    "Upper chains use maximum-length rope constraints; lower chains use two articulated rigid segments",
+    "Masses, contact thickness and friction approximate; 1 model unit assumed 0.05 m until a real dimension is supplied",
+    "Internal ring joints use finite rest-angle stiffness and damping to retain the original assembly pose",
+    "Photographic colours are restored from the saved original; no white-washing filter"
+  ],
+  "upperChainLengths": {
+    "UpperLeft": 2.8043536569298793,
+    "UpperRight": 2.8043536569298793,
+    "UpperCenter": 1.7091537524502758
+  },
+  "sha256": "5fb791bb733a8a24b0fa12bd8ceafcc628c928dfce364d0e576291fd00cde6c9",
+  "bytes": 7476156,
+  "revision": "Upright eight-point snowflake from new reference photos, softer drag response, continuous lower-chain display and pixel-sized rim repair; saved photo pattern and metal ring geometry retained",
+  "suspension": {
+    "evidence": "four connection close-ups supplied on 2026-10-10, including 8d21e9206fc9e3fd91d627e906d881c4.jpg, and both real motion videos",
+    "top": "invisible support -> original large clasp -> existing connector -> interlocking common jump ring -> three interlocked chains; no hook",
+    "sideChains": "OuterRing at opposite left/right connection eyes",
+    "centerChain": "SnowflakeCore upper eye; retains V2 rotational connection to InnerRing and stays inside the ring assembly",
+    "centerAnchorLocal": [
+      0.0071522235236270324,
+      0,
+      -0.9253479739319626
+    ],
+    "snowflakeUpperHoleLocal": [
+      0.0071522235236270324,
+      0,
+      -0.7273479739319626
+    ],
+    "snowflakeUpperHoleRadius": 0.025,
+    "centerConnection": "middle chain -> small jump ring -> oval connector passing through the pierced upper snowflake tip; both connectors belong to SnowflakeCore",
+    "blueBranch": "SnowflakeCore lower eye -> attached clasp -> continuous articulated chain -> small snowflake and translucent blue bead",
+    "clearBranches": "OuterRing -> two chain segments -> small snowflake and clear drop",
+    "branchSplits": [
+      {
+        "branch": "CrystalBranch1",
+        "chainLength": 0.44,
+        "segments": [
+          0,
+          0.22,
+          0.44
+        ],
+        "connectorOwner": "CrystalBranch1"
+      },
+      {
+        "branch": "CrystalBranch2",
+        "chainLength": 0.44,
+        "segments": [
+          0,
+          0.22,
+          0.44
+        ],
+        "connectorOwner": "CrystalBranch2"
+      },
+      {
+        "branch": "CrystalBranch3",
+        "chainLength": 0.44,
+        "segments": [
+          0,
+          0.22,
+          0.44
+        ],
+        "connectorOwner": "CrystalBranch3"
+      },
+      {
+        "branch": "CrystalBranch4",
+        "chainLength": 0.44,
+        "segments": [
+          0,
+          0.22,
+          0.44
+        ],
+        "connectorOwner": "CrystalBranch4"
+      },
+      {
+        "branch": "BlueBranch",
+        "chainLength": 1.32,
+        "segments": [
+          0,
+          0.66,
+          1.32
+        ],
+        "connectorOwner": "BlueBranch"
+      }
+    ],
+    "lowerChainDisplay": "Fixed-size links placed continuously through articulated joint positions, with attached rings at both ends",
+    "lowerClaspConnection": "small attached jump ring -> existing clasp -> continuous links -> small snowflake connector"
+  },
+  "appearance": {
+    "finish": "original photographic silver restored",
+    "preserved": [
+      "original eight-point main snowflake and six-point small charm photographic patterns; main pole aligned to upright reference and pixel-sized rim steps rounded",
+      "all three ring geometries",
+      "four transparent drops and one blue bead"
+    ],
+    "clearDropTransmission": 0.82,
+    "clearFacetPhotoWeight": 0.6,
+    "blueBeadTransmission": 0.78,
+    "upperLinkWireRadius": 0.01,
+    "runtimeSilverColourCorrection": false,
+    "clearDropFlatShading": true
+  },
+  "localRepairReport": [
+    {
+      "mesh": "BlueBranch_Aged silver_0",
+      "separatedLinks": 7,
+      "claspPreserved": true
+    },
+    {
+      "mesh": "BlueBranch_Aged silver_1",
+      "separatedLinks": 10,
+      "claspPreserved": false
+    },
+    {
+      "mesh": "CrystalBranch1_Aged silver_1",
+      "separatedLinks": 3,
+      "claspPreserved": false
+    },
+    {
+      "mesh": "CrystalBranch2_Aged silver_1",
+      "separatedLinks": 3,
+      "claspPreserved": false
+    },
+    {
+      "mesh": "CrystalBranch3_Aged silver_1",
+      "separatedLinks": 3,
+      "claspPreserved": false
+    },
+    {
+      "mesh": "CrystalBranch4_Aged silver_1",
+      "separatedLinks": 3,
+      "claspPreserved": false
+    },
+    {
+      "mesh": "BlueBranch_Photographic silver charm face_2",
+      "roundedBoundaryVertices": 496,
+      "maximumPlanarShift": 0.001098886351854838,
+      "depthUnchanged": true,
+      "UVUnchanged": true,
+      "holePreserved": false
+    },
+    {
+      "mesh": "CrystalBranch1_Photographic silver charm face_2",
+      "roundedBoundaryVertices": 496,
+      "maximumPlanarShift": 0.001098886351854838,
+      "depthUnchanged": true,
+      "UVUnchanged": true,
+      "holePreserved": false
+    },
+    {
+      "mesh": "CrystalBranch2_Photographic silver charm face_2",
+      "roundedBoundaryVertices": 496,
+      "maximumPlanarShift": 0.001098886351854838,
+      "depthUnchanged": true,
+      "UVUnchanged": true,
+      "holePreserved": false
+    },
+    {
+      "mesh": "CrystalBranch3_Photographic silver charm face_2",
+      "roundedBoundaryVertices": 496,
+      "maximumPlanarShift": 0.001098886351854838,
+      "depthUnchanged": true,
+      "UVUnchanged": true,
+      "holePreserved": false
+    },
+    {
+      "mesh": "CrystalBranch4_Photographic silver charm face_2",
+      "roundedBoundaryVertices": 496,
+      "maximumPlanarShift": 0.001098886351854838,
+      "depthUnchanged": true,
+      "UVUnchanged": true,
+      "holePreserved": false
+    },
+    {
+      "mesh": "medallion photographic extruded relief_upper_tip_hole",
+      "roundedBoundaryVertices": 2475,
+      "maximumPlanarShift": 0.0022162019356306096,
+      "depthUnchanged": true,
+      "UVUnchanged": true,
+      "holePreserved": true
+    },
+    {
+      "mesh": "medallion photographic extruded relief_upper_tip_hole",
+      "uprightRotationDegrees": -11.778025624895227,
+      "photoAndUVUnchanged": true,
+      "eightPointPatternRetained": true
+    },
+    {
+      "mesh": "BlueBranch_Photographic silver charm face_2",
+      "hangingRotationDegrees": 90,
+      "originalCentreY": -0.2,
+      "hangingCentreY": -0.22,
+      "UVAndDepthUnchanged": true,
+      "existingPayloadAndRingsPreserved": true
+    },
+    {
+      "mesh": "CrystalBranch1_Photographic silver charm face_2",
+      "hangingRotationDegrees": 90,
+      "originalCentreY": -0.185,
+      "hangingCentreY": -0.205,
+      "UVAndDepthUnchanged": true,
+      "existingPayloadAndRingsPreserved": true
+    },
+    {
+      "mesh": "CrystalBranch2_Photographic silver charm face_2",
+      "hangingRotationDegrees": 90,
+      "originalCentreY": -0.185,
+      "hangingCentreY": -0.205,
+      "UVAndDepthUnchanged": true,
+      "existingPayloadAndRingsPreserved": true
+    },
+    {
+      "mesh": "CrystalBranch3_Photographic silver charm face_2",
+      "hangingRotationDegrees": 90,
+      "originalCentreY": -0.185,
+      "hangingCentreY": -0.205,
+      "UVAndDepthUnchanged": true,
+      "existingPayloadAndRingsPreserved": true
+    },
+    {
+      "mesh": "CrystalBranch4_Photographic silver charm face_2",
+      "hangingRotationDegrees": 90,
+      "originalCentreY": -0.185,
+      "hangingCentreY": -0.205,
+      "UVAndDepthUnchanged": true,
+      "existingPayloadAndRingsPreserved": true
+    }
+  ]
+}

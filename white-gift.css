@@ -1,0 +1,50 @@
+body.is-model{background:#f4efe7;color:#6f5250}
+body.is-model .ambience{display:none}
+body.is-model .quiet-header{border-bottom:0;color:#967149}
+.model-scene{margin:0;padding:8px 24px 32px;background:radial-gradient(ellipse at 50% 37%,#fffdf9 0,#f6f1e9 52%,#eee7dd 100%)}
+.white-gallery{display:flex;flex-direction:column;align-items:center;width:100%;max-width:680px;margin:auto}
+.model-scene .gallery-stage{position:relative;width:100%;max-width:none;padding:0;margin:0;align-self:auto;order:0}
+.model-scene .model-host{position:relative;width:min(100%,calc(70svh * .8),544px);height:auto;min-height:0;aspect-ratio:4/5;margin:0 auto;isolation:isolate}
+#figurine-canvas{display:block;width:100%;height:100%;pointer-events:none;user-select:none;-webkit-user-select:none}
+.gift-actions{display:flex;gap:16px;justify-content:center;align-items:center;margin:8px auto 0;position:relative;z-index:2;flex-wrap:wrap}
+.gift-actions button,.claim-actions button{font:inherit;font-size:13px;letter-spacing:.08em;min-height:44px;min-width:114px;padding:10px 22px;border:1px solid #bca28d66;border-radius:24px;background:#fffaf3b3;color:#7d6055;cursor:pointer;transition:background .2s,border-color .2s}
+.gift-actions button[hidden],.claim-actions button[hidden]{display:none}
+.gift-actions button:hover,.claim-actions button:hover{border-color:#99715c;background:#f0e4d4}
+.gift-actions button:focus-visible,.claim-actions button:focus-visible{outline:2px solid #a37355;outline-offset:4px}
+.model-scene .loading-panel{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;margin:0;z-index:3}
+.model-scene .loading-panel[hidden]{display:none}
+.model-scene .loading-panel p{position:absolute;width:1px;height:1px;margin:-1px;clip-path:inset(50%);overflow:hidden}
+.gift-loading-dot{display:block;width:20px;height:20px;border:1px solid #d6c2ae;border-top-color:#8f6f5c;border-radius:50%;animation:giftLoading 1.2s linear infinite}
+.model-scene.load-error .gift-loading-dot{display:none}
+.model-scene.load-error .loading-panel p{position:static;width:auto;height:auto;clip-path:none;margin:0 20px;max-width:280px;font-size:12px;text-align:center;line-height:1.8;color:#8f6f5c}
+.gift-dialog{width:min(660px,calc(100vw - 40px));max-height:calc(100svh - 36px);padding:34px 32px 30px;overflow:auto;border:0;border-radius:18px;background:#f9f4eb;color:#514232;box-shadow:0 24px 90px #35271b33;box-sizing:border-box}
+.gift-dialog::backdrop{background:#40362a45;backdrop-filter:blur(5px)}
+.gift-dialog h2{font:400 23px/1.4 var(--serif,"Songti SC",serif);text-align:center;letter-spacing:.12em;margin:0 0 26px}
+.gift-coupon{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 100px;min-height:226px;border:1px solid #c4a678;background:radial-gradient(ellipse at 20% 15%,#fff9ee,#f1e7d6);box-shadow:0 7px 18px #9a80561b}
+.gift-coupon::before{content:"";position:absolute;inset:5px;border:1px solid #c4a67888;pointer-events:none}
+.coupon-main{padding:22px 28px 25px;min-width:0}
+.coupon-monogram{display:block;font:20px Georgia,serif;letter-spacing:.15em;color:#9b7b4e}
+.coupon-title{font:400 38px/1.3 var(--serif,"Songti SC",serif);letter-spacing:.12em;margin:16px 0 8px}
+.coupon-gift{font-size:12px;letter-spacing:.08em;margin:0;color:#8a7558}
+.coupon-redemption{border-top:1px solid #d3c1a3;padding-top:17px;margin:20px 0 0;font-size:15px;letter-spacing:.08em}
+.coupon-stub{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;border-left:1px dashed #c5b18c;margin:12px 0;color:#a08458}
+.coupon-stub strong{font:48px/1 Georgia,serif;font-weight:400}.coupon-stub span{font-size:10px;letter-spacing:.14em}
+.coupon-stub::before,.coupon-stub::after{content:"";position:absolute;left:-8px;width:14px;height:14px;border-radius:50%;background:#f9f4eb;border:1px solid #c4a678;clip-path:inset(50% 0 0 0);top:-19px}
+.coupon-stub::after{top:auto;bottom:-19px;transform:rotate(180deg)}
+.coupon-stamp{display:none;position:absolute;right:124px;top:22px;font-size:12px;letter-spacing:.12em;line-height:1;padding:8px 12px;color:#9e6452;border:1px solid #9e6452aa;transform:rotate(-8deg)}
+.gift-dialog[data-claimed=true] .coupon-stamp{display:block}
+.claim-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:26px}
+#claim-gift,#save-gift-coupon{background:#826544;color:#fff8eb;border-color:#826544}
+#claim-gift:hover,#save-gift-coupon:hover{background:#6f5438}
+@keyframes giftLoading{to{transform:rotate(360deg)}}
+@media(max-width:760px){
+ .model-scene{padding:8px 18px 28px}.model-scene .model-host{width:min(100%,calc(65svh * .8),480px)}
+ .gift-actions{gap:12px;margin-top:12px}.gift-actions button{min-width:110px;font-size:12px;padding:10px 18px}
+ .gift-dialog{padding:27px 18px 24px;width:calc(100vw - 28px)}.gift-dialog h2{font-size:21px;margin-bottom:22px}
+ .gift-coupon{grid-template-columns:minmax(0,1fr) 62px;min-height:214px}.coupon-main{padding:20px 18px 23px}
+ .coupon-title{font-size:32px;margin-top:17px}.coupon-monogram{font-size:17px}.coupon-gift{font-size:11px}
+ .coupon-redemption{font-size:13px;margin-top:19px;padding-top:17px}.coupon-stub strong{font-size:38px}.coupon-stub span{font-size:9px;letter-spacing:.06em}
+ .coupon-stamp{right:76px;top:19px;font-size:10px;padding:6px 7px}
+ .claim-actions{gap:10px;margin-top:22px}.claim-actions button{min-width:102px;font-size:12px;padding:10px 16px}
+}
+@media(prefers-reduced-motion:reduce){.gift-actions button,.claim-actions button{transition:none}.gift-loading-dot{animation:none}}
